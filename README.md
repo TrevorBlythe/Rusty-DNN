@@ -1,6 +1,10 @@
 # brain-machine
 A rust library to create CPU neural networks and neural evoloution.
 
+# In progress
+
+Its barely able to make perceptrons right now.
+
 '''
 cargo run
 '''
