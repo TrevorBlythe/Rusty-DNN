@@ -2,10 +2,10 @@
 pub mod layers;
 pub struct Net {
     //we use f32 cuz it works better with gpu im pretty sure (will do someday)
-    pub layers: Vec<Box<dyn layers::GenericLayer::GenericLayer>>,
-    layer_count: usize, //layers.len() basically.. I made it so when i take layers out of the network it will still know its true size.
-    pub batch_size: usize,
-    training_iterations: usize, //goes up +1 for every 'backwards' call to net.
+    pub layers: Vec<Box<dyn layers::GenericLayer::GenericLayer>>, //a vector of layer structs each representing a layer in the AI model.
+    layer_count: usize, //layers.len() basically.. Its only usize cuz thats whats returned from len()
+    pub batch_size: i32,
+    training_iterations: i32, //goes up +1 for every 'backwards' call to net.
     // pub even_layers:Vec<Box<dyn GenericLayer>>, //this is an idea for the future idk tho.
     // pub odd_layers:Vec<Box<dyn GenericLayer>>
     learning_rate: f32,
@@ -14,7 +14,7 @@ pub struct Net {
 impl Net {
     pub fn new(
         mut layers: Vec<Box<dyn layers::GenericLayer::GenericLayer>>,
-        batch_size: usize,
+        batch_size: i32,
         learning_rate: f32,
     ) -> Self {
 

@@ -8,7 +8,7 @@ pub struct FC {
     pub bs: Vec<f32>, //bias sensitivities
     // pub in_data:Box<Vec<f32>>,
     pub out_data: Vec<f32>, //the "in data" for the next layer
-    pub costs: Vec<f32>,    //costs for each "neuron/node/in data"
+    pub costs: Vec<f32>,    //error of each "neuron/node/in data"
     pub in_size: usize,
     pub out_size: usize,
 }
