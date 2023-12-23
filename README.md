@@ -91,4 +91,4 @@ let mut x = 0;
 //at this point its trained
 ```
 
-More simple than pytorch lol
+This is Pytorch if it wasn't needlessly complicated be like hahahaha
