@@ -30,7 +30,7 @@ use ment::*;
 
 This is how you make a neural network that looks like this
 <br>
-![Alt text](./network.png)
+<img src="network.png" alt="drawing" width="300"/>
 
 Use this code to make it:
 
@@ -51,11 +51,12 @@ let mut net = Net::new(
         1, //batch size
         0.1, //learning rate
     );
+    //"net" is the variable representing your entire network
 ```
 
 <br>
 <br>
-This is how you propagate data through the layer:
+This is how you propagate data through the network:
 
 ```rust
 net.forward_data(&vec![1.0, 0.0, -69.0]); //returns the output vector
@@ -64,9 +65,6 @@ net.forward_data(&vec![1.0, 0.0, -69.0]); //returns the output vector
 After propagating some data through, you can then also backpropagate some like this:
 
 ```rust
-net.forward_data(&vec![1.0, 0.0, -69.0]); //returns the output vector
-
-
  net.backward_data(&vec![0.0]); //a vector of what you want the nn to output
 ```
 
