@@ -4,7 +4,7 @@ Create Modular Deep Neural Networks in Rust easy
 
 # In progress
 
-If literally anyone stars this project I will add convolutional layers.
+If literally anyone stars this project I will add convolutional layers, more activations, and deconv layers.
 If this project get 20 stars I add everything
 
 # Installation
