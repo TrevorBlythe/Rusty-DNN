@@ -12,7 +12,7 @@ If this project get 20 stars I add everything
 After running
 
 ```
-cargo add rdnn
+cargo add Rust_Simple_DNN
 ```
 
 Then you must put these in your rust code
