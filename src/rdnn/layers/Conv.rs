@@ -1,19 +1,18 @@
-use crate::ment::layers::GenericLayer::GenericLayer;
+use crate::rdnn::layers::GenericLayer::GenericLayer;
 use rand::Rng;
-
-pub struct FC {
+pub struct Conv {
     pub w: Vec<f32>,  //weights
     pub ws: Vec<f32>, //weight's sensitivites
     pub b: Vec<f32>,  //bias
     pub bs: Vec<f32>, //bias sensitivities
     // pub in_data:Box<Vec<f32>>,
     pub out_data: Vec<f32>, //the "in data" for the next layer
-    pub costs: Vec<f32>,    //error of each "neuron/node/in data"
+    pub costs: Vec<f32>,    //costs for each "neuron/node/in data"
     pub in_size: usize,
     pub out_size: usize,
 }
 
-impl GenericLayer for FC {
+impl GenericLayer for Conv {
     fn get_name(&self) -> String {
         return String::from("Fc");
     }
@@ -107,9 +106,8 @@ impl GenericLayer for FC {
         }
     }
 }
-
-pub fn new(in_size: usize, out_size: usize) -> Box<FC> {
-    return Box::new(FC {
+pub fn new(in_size: usize, out_size: usize) -> Box<Conv> {
+    return Box::new(Conv {
         w: (0..in_size * out_size)
             .map(|_| {
                 rand::thread_rng().gen::<f32>()
@@ -123,11 +121,11 @@ pub fn new(in_size: usize, out_size: usize) -> Box<FC> {
         b: (0..out_size)
             .map(|_| {
                 rand::thread_rng().gen::<f32>()
-                    * (if rand::thread_rng().gen::<f32>() > 0.5 {
+                    * if rand::thread_rng().gen::<f32>() > 0.5 {
                         1.0
                     } else {
                         -1.0
-                    }) * 1.0
+                    }
             })
             .collect(),
         //vec of random floats (0-1) each one multiplied by a -1 or 1 (50% chance either). https://stackoverflow.com/questions/48218459/how-do-i-generate-a-vector-of-random-numbers-in-a-range

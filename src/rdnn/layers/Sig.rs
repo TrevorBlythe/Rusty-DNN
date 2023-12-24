@@ -1,4 +1,4 @@
-use crate::ment::layers::GenericLayer::GenericLayer;
+use crate::rdnn::layers::GenericLayer::GenericLayer;
 
 pub struct Sig {
     pub out_data: Vec<f32>, //the input data for the next layer

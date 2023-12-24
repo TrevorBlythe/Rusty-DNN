@@ -1,4 +1,4 @@
-use crate::ment::layers::GenericLayer::GenericLayer;
+use crate::rdnn::layers::GenericLayer::GenericLayer;
 
 pub struct Input {
     pub out_data: Vec<f32>, //the "in data" for the next layer
