@@ -2,6 +2,10 @@
 name = "rdnn"
 version = "0.1.0"
 edition = "2021"
+description = "A crate for making optimized modular neural networks in rust"
+readme = "README.md"
+repository = "https://github.com/TrevorBlythe/Rusty-DNN"
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
