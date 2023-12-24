@@ -5,32 +5,28 @@ Create Modular Deep Neural Networks in Rust easy
 # In progress
 
 If literally anyone stars this project I will add convolutional layers.
-
-# How to run demo?
-
-'''
-cargo run
-'''
-
-This will make a perceptron that trains to be a XOR gate, which is basically a way to test that the library is working good.
+If this project get 20 stars I add everything
 
 # Installation
 
-1. Download the files in src/ (except main.rs)<br>
-2. put them next to your main.rs <br>
-3. include them with this code
+After running
+
+```
+cargo add rdnn
+```
+
+Then you must put these in your rust file
 
 ```rust
-mod ment;
-use ment::layers::*;
-use ment::*;
+use rdnn::rdnn::layers::*;
+use rdnn::rdnn::*;
 ```
 
 # Mini tutorial
 
 This is how you make a neural network that looks like this
 <br>
-<img src="network.png" alt="drawing" width="300"/>
+<img src="network.png" alt="image-alt-text-check-github-to-see-image" width="300"/>
 
 Use this code to make it:
 

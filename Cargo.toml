@@ -1,5 +1,5 @@
 [package]
-name = "rdnn"
+name = "Rust_Simple_DNN"
 version = "0.1.0"
 edition = "2021"
 description = "A crate for making optimized modular neural networks in rust"

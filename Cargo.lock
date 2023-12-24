@@ -3,6 +3,13 @@
 version = 3
 
 [[package]]
+name = "Rust_Simple_DNN"
+version = "0.1.0"
+dependencies = [
+ "rand",
+]
+
+[[package]]
 name = "cfg-if"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -59,13 +66,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
 dependencies = [
  "getrandom",
-]
-
-[[package]]
-name = "rdnn"
-version = "0.1.0"
-dependencies = [
- "rand",
 ]
 
 [[package]]
