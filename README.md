@@ -15,11 +15,11 @@ After running
 cargo add rdnn
 ```
 
-Then you must put these in your rust file
+Then you must put these in your rust code
 
 ```rust
-use rdnn::rdnn::layers::*;
-use rdnn::rdnn::*;
+use Rust_Simple_DNN::rdnn::layers::*;
+use Rust_Simple_DNN::rdnn::*;
 ```
 
 # Mini tutorial
