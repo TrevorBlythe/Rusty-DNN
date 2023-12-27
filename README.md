@@ -22,6 +22,33 @@ use Rust_Simple_DNN::rdnn::layers::*;
 use Rust_Simple_DNN::rdnn::*;
 ```
 
+# Current Implemented Layers
+
+Think of layers as building blocks for a neural network. Different Layers process data in different ways. Its important to choose the right ones to fit your situation. (Ex: conv layers for image processing)
+
+### layers:
+
+- Fully connected Dense Layers
+
+```rust
+FC::new(inputSize, outputSize)
+```
+
+These are best when doing just straight raw data processing. Using these combined with activations, it is technically possible to make a mathematical model for anything you want.
+These layers have exponintial more computation when scaled up though.
+
+<br>
+
+- Activations
+
+```rust
+Tanh::new(inputSize); //hyperbolic tangent
+Relu::new(inputSize); //if activation > 0
+Sig::new(inputSize); //sigmoid
+```
+
+Put these after FC,Conv,Deconv, or any dotproduct type layer to make the network nonlinear, or else the network will not work 99% of use cases.
+
 # Mini tutorial
 
 This is how you make a neural network that looks like this
@@ -84,7 +111,7 @@ let mut x = 0;
         x += 1;
     }
 
-//at this point its trained
+//at this point its trained (although this dataset is pretty useless lol)
 ```
 
 This is Pytorch if it wasn't needlessly complicated be like hahahaha
